@@ -1,0 +1,50 @@
+generated: '2026-07-21'
+method: searched
+source: https://developers.getrollee.com/docs/webhooks
+spec_type: Webhooks
+docs: https://developers.getrollee.com/docs/webhooks
+delivery:
+  transport: HTTP POST/PUT callback to a subscriber-configured URL
+  signature:
+    algorithm: HMAC SHA-512
+    header: X-Signature
+    note: Sent only when a webhook `secret` is configured.
+  retry_policy: >-
+    Responses slower than 10 seconds or with a non-2xx status trigger up to three
+    retries at minimum 30-second intervals before the delivery is discarded.
+  configuration: >-
+    Webhooks are registered/replaced via PUT requests to per-category endpoints
+    (accounts, users, endpoints, multi_endpoints, rollee_connect_events). Each
+    config is a full replace: provide `url`, `method` (POST|PUT), `enabled`,
+    optional `secret`, optional `headers` (and `platform_ids` for multi-endpoint).
+categories:
+- category: account_events
+  config_endpoint: PUT /webhooks/accounts
+  events: [create_account, delete_account, update_account, connect_account, disconnect_account]
+  payload_fields: [action, connected, created_at, datasource_id, account_id, user_id]
+- category: user_events
+  config_endpoint: PUT /webhooks/users
+  events: [create_user, delete_user, update_user]
+  payload_fields: [event, metadata, created_at, account_count, user_id]
+- category: endpoint_events
+  config_endpoint: PUT /webhooks/endpoints
+  events: [update_endpoint]
+  payload_fields: [event, account_id, endpoint, date_start, date_end, request_id, user_id, data_available]
+- category: multi_endpoint_events
+  config_endpoint: PUT /webhooks/multi-endpoints
+  events: [update_multi_endpoint]
+  payload_fields: [event, account_id, user_id, endpoints]
+- category: rollee_connect_events
+  config_endpoint: PUT /webhooks/rollee-connect-events
+  events: [rollee_connect_events]
+  payload_fields: [user_id, screen, duration, tracking_id, device_type, datasource_id, account_id, connection_status, status_description, timestamp, auth_method]
+- category: company_account_events
+  config_endpoint: PUT /company/v0.5/webhooks/accounts
+  events: [account events for company accounts]
+- category: company_endpoint_events
+  config_endpoint: PUT /company/v0.5/webhooks/endpoints
+  events: [endpoint events for company accounts]
+notes: >-
+  Rollee documents a webhook catalog but does not publish an AsyncAPI document,
+  so this artifact captures the webhook event surface (type: Webhooks). No
+  fabricated AsyncAPI spec is emitted.

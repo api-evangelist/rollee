@@ -1,0 +1,116 @@
+# Rollee Documentation
+
+> Documentation of the Rollee API
+
+## Guides
+- [Introduction](https://developers.getrollee.com/docs/getting-started.md): This page will help you get started with Rollee.
+- [FAQ](https://developers.getrollee.com/docs/faq.md): Frequently Asked Questions
+- [Rollee Connect](https://developers.getrollee.com/docs/rollee-connect.md): Provides a user-friendly and versatile way for establishing connections.
+- [Connect Errors](https://developers.getrollee.com/docs/connect-errors.md)
+- [Customization](https://developers.getrollee.com/docs/customisation.md): Customize Connect through the dashboard
+- [Connect SDK](https://developers.getrollee.com/docs/connect-sdk.md)
+- [React](https://developers.getrollee.com/docs/react.md)
+- [React Native](https://developers.getrollee.com/docs/react-native.md): Rollee Connect SDK is a plugin for integrating Rollee Connect process on Mobile applications based on React Native.
+- [Web JS](https://developers.getrollee.com/docs/web.md): Rollee Connect SDK is a plugin for integrating Rollee Connect process on Web applications based on HTML and Javascript
+- [Flutter SDK](https://developers.getrollee.com/docs/flutter-sdk.md)
+- [Accounts](https://developers.getrollee.com/docs/fetch-data.md)
+- [Security](https://developers.getrollee.com/docs/data-security.md): We keep your data safe!
+- [Data Standard](https://developers.getrollee.com/docs/data-standard.md)
+- [Get Started](https://developers.getrollee.com/docs/get-started-copy.md): This page will help you get started with Rollee
+- [Authentication](https://developers.getrollee.com/docs/authentication.md): This page will explain how authentication works in the API
+- [Conventions](https://developers.getrollee.com/docs/conventions.md): Here you will learn about a few conventions that are used in the API
+- [Users and Sessions](https://developers.getrollee.com/docs/users-and-sessions.md): In this page you will learn two important concepts to start using the API
+- [Environments](https://developers.getrollee.com/docs/user-environments.md): In this page you will learn about the Sandbox environment
+- [Webhooks](https://developers.getrollee.com/docs/webhooks.md): In this page you will learn about the different type of webhooks and how to set them up
+- [MCP](https://developers.getrollee.com/docs/mcp.md): In this page you will learn how to set up and use the MCP Server
+- [Get Started](https://developers.getrollee.com/docs/get-started-copy-1.md): This page will help you get started with Rollee.
+- [Authentication](https://developers.getrollee.com/docs/all.md)
+- [Conventions](https://developers.getrollee.com/docs/conventions-1.md)
+- [Companies and Sessions](https://developers.getrollee.com/docs/users-and-sessions-copy.md)
+- [Environments](https://developers.getrollee.com/docs/company-environments.md)
+- [Webhooks](https://developers.getrollee.com/docs/webhooks-copy.md)
+- [MCP](https://developers.getrollee.com/docs/mcp2.md): In this page you will learn how to set up and use the MCP Server
+
+## API Reference
+- [Getting Started](https://developers.getrollee.com/reference/getting-started-with-your-api.md): This page will help you get started with your new API.
+- [Get account information](https://developers.getrollee.com/reference/get_accounts-id.md): Get information related to an account
+- [Delete an Account](https://developers.getrollee.com/reference/delete_accounts-id.md): Delete an account belonging to a User
+- [Disconnect account](https://developers.getrollee.com/reference/post_accounts-id-disconnect.md): Set the account as disconnected so that Rollee will not update it anymore until it gets reconnected
+- [Account reconnect session](https://developers.getrollee.com/reference/post_accounts-id-reconnect.md): Create a reconnect session for an account
+- [Get Accounts](https://developers.getrollee.com/reference/get_users-id-accounts.md): Get all accounts belonging to a User
+- [Get activity](https://developers.getrollee.com/reference/get_accounts-id-activity.md): Get activity information of an account. Available for gig economy platforms only.
+- [Get assets](https://developers.getrollee.com/reference/get_accounts-id-assets.md): Get assets information of an account. Available for gig economy and tax.
+- [Get bank informations](https://developers.getrollee.com/reference/get_accounts-id-banking-info.md): Get bank information of an account. Available for gig economy and tax.
+- [Get bonuses](https://developers.getrollee.com/reference/get_accounts-id-bonuses.md): Get bonuses information of an account
+- [Get documents](https://developers.getrollee.com/reference/get_accounts-id-documents.md): Get documents information of an account
+- [Get employment](https://developers.getrollee.com/reference/get_accounts-id-employment.md): Get employment information of an account. Available for gig economy and tax.
+- [Get income](https://developers.getrollee.com/reference/get_accounts-id-income.md): Get income information of an account. Available for gig economy and tax.
+- [Get performance](https://developers.getrollee.com/reference/get_accounts-id-performance.md): Get performance information of an account. Available for gig economy platforms only.
+- [Get profile](https://developers.getrollee.com/reference/get_accounts-id-profile.md): Get profile information of an account. Available for gig economy and tax.
+- [Get transactions](https://developers.getrollee.com/reference/get_accounts-id-transactions.md): Get transactions of an account
+- [Get trips](https://developers.getrollee.com/reference/get_accounts-id-trips.md): Get trips information of an account. Available for gig economy platforms only.
+- [Get vehicles](https://developers.getrollee.com/reference/get_accounts-id-vehicles.md): Get vehicles information of an account. Available for gig economy platforms only.
+- [Get wallet](https://developers.getrollee.com/reference/get_accounts-id-wallet.md): Get wallet information of an account
+- [Get data settings](https://developers.getrollee.com/reference/get_data-settings.md): Get current data collection configuration
+- [Get Data Sources](https://developers.getrollee.com/reference/get_data-sources.md): Get available data sources for a partner
+- [Refresh a session](https://developers.getrollee.com/reference/post_sessions-session-refresh-1.md): Refresh a session that has expired
+- [Create JWT Token](https://developers.getrollee.com/reference/get_token-refresh-1.md): Generate a new valid JWT Token
+- [Get Users](https://developers.getrollee.com/reference/get_users.md): Get informations for all users
+- [Create User](https://developers.getrollee.com/reference/post_users.md): Create a user with optional metadata
+- [Get User](https://developers.getrollee.com/reference/get_users-id-1.md): Get informations for a specific user
+- [Update user metadata](https://developers.getrollee.com/reference/put_users-id-1.md): Update an user's metadata. The previous metadata will be replaced
+- [Delete user](https://developers.getrollee.com/reference/delete_users-id.md): Delete a User and its associated Accounts
+- [Get performance index](https://developers.getrollee.com/reference/get_users-id-performance-index.md): Get performance index for the user. Available for gig economy platforms only.
+- [Create a session for an user](https://developers.getrollee.com/reference/post_users-id-sessions-new.md): Create a session for a user (intended for users created with the API v0.3)
+- [Lists configured webhooks](https://developers.getrollee.com/reference/get_webhooks.md): List all the webhooks that are currently configured (both enabled and disabled ones)
+- [Webhook configuration for Accounts Events](https://developers.getrollee.com/reference/put_webhooks-accounts.md): Call to configure webhooks and receive Rollee's Events for the users' accounts. Please bear in mind that this is a full replace operation for the webhook attributes, so you need to provide all the parameters.
+- [Webhook configuration for Endpoint Events](https://developers.getrollee.com/reference/put_webhooks-endpoints.md): Call to configure your Webhooks and receive notifications as soon as new data has been fetched for a specific account. Please bear in mind that this is a full replace operation for the webhook attributes, so you need to provide all the parameters.
+- [Webhook configuration for Multi Endpoint Events](https://developers.getrollee.com/reference/put_webhooks-multi-endpoints.md): Call to configure your Webhooks and receive notifications as soon as data from several different endpoints is fetched. Please bear in mind that this is a full replace operation for the webhook attributes, so you need to provide all the parameters.
+- [Webhook configuration for Rollee Connect Events](https://developers.getrollee.com/reference/put_webhooks-rollee-connect-events.md): Call to configure your Webhooks and receive notifications for each rollee connect event. Please bear in mind that this is a full replace operation for the webhook attributes, so you need to provide all the parameters.
+- [Webhook configuration for Users Events](https://developers.getrollee.com/reference/put_webhooks-users.md): Call to configure your Webhooks and receive Rollee's Events for your Users. Please bear in mind that this is a full replace operation for the webhook attributes, so you need to provide all the parameters (even optionals if these were set before and want to keep them).
+- [Delete a webhook configuration](https://developers.getrollee.com/reference/delete_webhooks-type.md): Delete a particular webhook configuration (can be accounts, users, rollee_connect_events, endpoints or multi_endpoints)
+- [Lists configured webhooks](https://developers.getrollee.com/reference/get_webhooks-v2.md): List all the webhooks that are currently configured (both enabled and disabled ones)
+- [Getting Started](https://developers.getrollee.com/reference/getting-started-with-your-api-copy.md): This page will help you get started with your new API.
+- [List all companies](https://developers.getrollee.com/reference/get_companies.md): Retrieve information about all companies associated with a specific person
+- [Create a new company](https://developers.getrollee.com/reference/post_companies.md): creates a new company that belongs to a specific client
+- [Delete an existing company](https://developers.getrollee.com/reference/delete_companies-id.md): Deletes a company that belongs to a specific client
+- [Get company info](https://developers.getrollee.com/reference/get_companies-id.md): Retrieve information about a specific company
+- [Get company accounts](https://developers.getrollee.com/reference/get_companies-id-company-accounts.md): Get all company accounts given a particular company
+- [Get company account information](https://developers.getrollee.com/reference/get_company-accounts-id.md): Get company account information
+- [Company Account reconnect session](https://developers.getrollee.com/reference/post_company-accounts-id-reconnect.md): Create a reconnect session for a company account
+- [Webhook configuration for Company Accounts Events](https://developers.getrollee.com/reference/put_company-v0-5-webhooks-accounts.md): Call to configure your Webhooks and receive Rollee's Events for your Company Accounts. Please contact Rollee team if you're planning to use Webhooks.
+- [Webhook configuration for Endpoint Events](https://developers.getrollee.com/reference/put_company-v0-5-webhooks-endpoints.md): Call to configure your Webhooks and receive notifications as soon as new data has been fetched for a specific company account. Please contact Rollee team if you're planning to use Webhooks.
+- [Lists configured webhooks](https://developers.getrollee.com/reference/get_webhooks-1.md): List all the webhooks that are currently configured (both enabled and disabled ones)
+- [Get company absences](https://developers.getrollee.com/reference/get_company-accounts-id-absences.md): Get Absences informations of a company account
+- [Get company employees](https://developers.getrollee.com/reference/get_company-accounts-id-employees.md): Get employees of a company account
+- [Get company activity](https://developers.getrollee.com/reference/get_company-accounts-id-activity.md): Get activity informations of a company account
+- [Get company banking_info](https://developers.getrollee.com/reference/get_company-accounts-id-banking-info.md): Get bank informations of a company account
+- [Get company documents](https://developers.getrollee.com/reference/get_company-accounts-id-documents.md): Get documents of a company account. All user documents are contained in a single list
+- [Get company employments](https://developers.getrollee.com/reference/get_company-accounts-id-employment.md): Get employment informations of a company account
+- [Get company income](https://developers.getrollee.com/reference/get_company-accounts-id-income.md): Get income informations of a company account
+- [Get company performance](https://developers.getrollee.com/reference/get_company-accounts-id-performance.md): Get performance informations of a company account
+- [Get company profiles](https://developers.getrollee.com/reference/get_company-accounts-id-profiles.md): Get profile informations of a company account
+- [Get company trips](https://developers.getrollee.com/reference/get_company-accounts-id-trips.md): Get trips of a company account
+- [Get company vehicles](https://developers.getrollee.com/reference/get_company-accounts-id-vehicles.md): Get vehicles informations of a company account
+- [Get company wallet](https://developers.getrollee.com/reference/get_company-accounts-id-wallet.md): Get wallet informations of a company account
+- [Refresh a session](https://developers.getrollee.com/reference/post_sessions-session-refresh.md): Refresh a session that has expired
+- [Create JWT Token](https://developers.getrollee.com/reference/get_token-refresh.md): Generate a new valid JWT Token
+- [Get user](https://developers.getrollee.com/reference/get_users-id.md): Retrieve information about a user
+- [Update user](https://developers.getrollee.com/reference/put_users-id.md): Updates user's metadata
+
+## Recipes
+- [Add Rollee Connect to your React App using the React SDK](https://developers.getrollee.com/recipes/add-rollee-connect-to-your-react-app-using-the-react-sdk.md)
+- [Add Rollee Connect to your React Native App using the React Native SDK](https://developers.getrollee.com/recipes/add-rollee-connect-to-your-react-native-app-using-the-react-native-sdk.md)
+- [Add Rollee Connect to your Webpage using the Web SDK](https://developers.getrollee.com/recipes/add-rollee-connect-to-your-webpage-using-the-web-sdk.md)
+- [Connect a Company Account and get data from it](https://developers.getrollee.com/recipes/connect-a-company-account-and-get-data-from-it.md)
+- [Connect an Account and get data from it](https://developers.getrollee.com/recipes/connect-an-account-and-get-data-from-it.md)
+- [Create a Company](https://developers.getrollee.com/recipes/create-a-company.md)
+- [Create a User](https://developers.getrollee.com/recipes/create-a-user.md)
+- [Download the Document files of a Connected Account](https://developers.getrollee.com/recipes/download-the-document-files-of-a-connected-account.md)
+- [Set up Webhooks](https://developers.getrollee.com/recipes/set-up-webhooks.md)
+
+## Pages
+- [User Authentication workflow](https://developers.getrollee.com/user-authentication-workflow.md)
+
+## Changelog
+- [Increased Coverage](https://developers.getrollee.com/changelog/increased-coverage.md)

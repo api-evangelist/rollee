@@ -1,8 +1,17 @@
 aid: rollee
 name: Rollee
-description: Rollee is a company surfaced as a portfolio company of seedcamp, speedinvest and added to
-  the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: >-
+  Rollee is an Open Finance / employment-data platform that lets fintechs, lenders,
+  and HR platforms verify the income, employment, and work history of both salaried
+  and self-employed workers in real time. Through a single API and the embeddable
+  Rollee Connect flow, Rollee aggregates data from 70+ sources — gig-economy
+  platforms (Uber, Bolt, Deliveroo, Just Eat, Stuart, and more), government tax
+  portals, payroll systems, and digital wallets — and normalizes it into a common
+  "Rollee Standard" schema covering income, transactions, employment, activity,
+  assets, banking info, documents, and vehicles. It powers consumer lending,
+  vehicle financing, tenant and income verification, earned-wage access, and
+  recruitment / work-history checks. The platform is ISO 27001 certified and
+  GDPR-compliant, and is backed by Seedcamp and Speedinvest.
 url: https://raw.githubusercontent.com/api-evangelist/rollee/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,17 +20,136 @@ x-backed-by:
 - speedinvest
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
+image: https://www.getrollee.com/favicon.ico
 tags:
 - Company
-apis: []
+- Open Finance
+- Income Verification
+- Employment Verification
+- Payroll Data
+- Gig Economy
+- Alternative Data
+- Underwriting
+- Lending
+- Fintech
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+apis:
+- name: Rollee User API
+  description: >-
+    Connect a worker's accounts and retrieve normalized income, employment,
+    transactions, activity, assets, banking info, documents, and vehicle data
+    across 70+ gig-economy, tax, payroll, and wallet data sources. Includes
+    user/account lifecycle, sessions, and webhook configuration.
+  humanURL: https://developers.getrollee.com/docs/getting-started
+  baseURL: https://api.getrollee.com/api/v0.5
+  tags:
+  - Income
+  - Employment
+  - Transactions
+  - Accounts
+  - Webhooks
+  properties:
+  - type: APIReference
+    url: https://developers.getrollee.com/reference/getting-started-with-your-api
+  - type: Documentation
+    url: https://developers.getrollee.com/docs/getting-started
+- name: Rollee Company API
+  description: >-
+    Company-side (employer / fleet) API to manage companies and company accounts
+    and retrieve employees, absences, employment, income, activity, banking info,
+    documents, trips, vehicles, and wallet data for a company account.
+  humanURL: https://developers.getrollee.com/reference/getting-started-with-your-api-copy
+  baseURL: https://api.getrollee.com/company/v0.5
+  tags:
+  - Company
+  - Employer
+  - Fleet
+  - Employees
+  properties:
+  - type: APIReference
+    url: https://developers.getrollee.com/reference/getting-started-with-your-api-copy
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 19
+  pass: local-v1
 common:
+- type: TrustCenter
+  url: security/rollee-trust-center.yml
+- type: DomainSecurity
+  url: security/rollee-domain-security.yml
 - type: Website
-  url: http://getrollee.com
+  url: https://www.getrollee.com
+- type: DeveloperPortal
+  url: https://developers.getrollee.com
+- type: Documentation
+  url: https://developers.getrollee.com/docs/getting-started
+- type: APIReference
+  url: https://developers.getrollee.com/reference/getting-started-with-your-api
+- type: GettingStarted
+  url: https://developers.getrollee.com/docs/getting-started
+- type: Blog
+  url: https://www.getrollee.com/blog
+- type: Support
+  url: https://www.getrollee.com/contact-us
+- type: SignUp
+  url: https://www.getrollee.com/contact-us
+- type: TermsOfService
+  url: https://www.getrollee.com/terms-of-service
+- type: PrivacyPolicy
+  url: https://www.getrollee.com/privacy-policy
+- type: LinkedIn
+  url: https://www.linkedin.com/company/rollee
+- type: ChangeLog
+  url: https://developers.getrollee.com/changelog
+- type: LLMsTxt
+  url: llms/rollee-llms.txt
+- type: MCPServer
+  url: mcp/rollee-mcp.yml
+- type: Authentication
+  url: authentication/rollee-authentication.yml
+- type: Conventions
+  url: conventions/rollee-conventions.yml
+- type: ChangeLog
+  url: changelog/rollee-changelog.yml
+- type: Lifecycle
+  url: lifecycle/rollee-lifecycle.yml
+- type: Conformance
+  url: conformance/rollee-conformance.yml
+- type: Compliance
+  url: https://www.getrollee.com/security
+- type: Sandbox
+  url: sandbox/rollee-sandbox.yml
+- type: ErrorCatalog
+  url: errors/rollee-problem-types.yml
+- type: DataModel
+  url: data-model/rollee-data-model.yml
+- type: Webhooks
+  url: asyncapi/rollee-webhooks.yml
+- type: Packages
+  url: packages/rollee-packages.yml
+- type: SDKs
+  url: packages/rollee-packages.yml
+- type: Components
+  url: components/rollee-components.yml
+- type: AgentSkill
+  url: skills/_index.yml

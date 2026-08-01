@@ -1,0 +1,28 @@
+generated: '2026-07-21'
+method: searched
+source: https://developers.getrollee.com/docs/connect-errors
+format: http-status
+docs:
+  api_auth: https://developers.getrollee.com/docs/authentication
+  connect_errors: https://developers.getrollee.com/docs/connect-errors
+notes: >-
+  Rollee surfaces two error surfaces: (1) standard HTTP status codes on API
+  requests, and (2) a dedicated "Connect Errors" reference describing why a
+  user's account connection can fail during the Rollee Connect flow. No
+  application/problem+json (RFC 9457) envelope is documented.
+problems:
+- status: 401
+  title: Unauthorized
+  detail: Invalid or expired JWT token. Refresh the token via the /token/refresh endpoint.
+  scope: api
+- status: 200
+  title: OK
+  detail: Successful authentication / request.
+  scope: api
+connect_errors:
+  note: >-
+    Account-connection failures (e.g. invalid datasource credentials,
+    unsupported datasource, MFA/authentication challenges, temporary datasource
+    unavailability) are reported through Rollee Connect events and the
+    connection status/description fields rather than as HTTP problem documents.
+  reference: https://developers.getrollee.com/docs/connect-errors

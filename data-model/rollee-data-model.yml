@@ -1,0 +1,105 @@
+generated: '2026-07-21'
+method: derived
+source: https://developers.getrollee.com/llms.txt
+notes: >-
+  Derived from the documented Rollee API reference (no downloadable OpenAPI is
+  published; the ReadMe reference and llms.txt index are the source). Entities and
+  relationships reflect the documented User API and Company API resource graph.
+entities:
+- name: User
+  id_format: UUID
+  description: A worker whose accounts are connected and whose data is retrieved.
+  key_operations:
+  - GET /users
+  - POST /users
+  - GET /users/{id}
+  - PUT /users/{id}
+  - DELETE /users/{id}
+- name: Account
+  id_format: UUID
+  description: A single connected datasource account belonging to a User (gig platform, tax portal, wallet, payroll).
+  key_operations:
+  - GET /users/{id}/accounts
+  - GET /accounts/{id}
+  - DELETE /accounts/{id}
+  - POST /accounts/{id}/disconnect
+  - POST /accounts/{id}/reconnect
+- name: Session
+  description: Short-lived session used to drive the Connect flow for a user/company.
+  key_operations:
+  - POST /users/{id}/sessions/new
+  - POST /sessions/{session}/refresh
+- name: Company
+  id_format: UUID
+  description: An employer/organization owned by a client.
+  key_operations:
+  - GET /companies
+  - POST /companies
+  - GET /companies/{id}
+  - DELETE /companies/{id}
+- name: CompanyAccount
+  id_format: UUID
+  description: A connected datasource account belonging to a Company.
+  key_operations:
+  - GET /companies/{id}/company-accounts
+  - GET /company-accounts/{id}
+  - POST /company-accounts/{id}/reconnect
+- name: Webhook
+  description: A subscriber-configured callback for a category of events.
+  key_operations:
+  - GET /webhooks
+  - PUT /webhooks/{type}
+  - DELETE /webhooks/{type}
+data_endpoints:
+  account:
+  - activity
+  - assets
+  - banking-info
+  - bonuses
+  - documents
+  - employment
+  - income
+  - performance
+  - profile
+  - transactions
+  - trips
+  - vehicles
+  - wallet
+  company_account:
+  - absences
+  - employees
+  - activity
+  - banking-info
+  - documents
+  - employment
+  - income
+  - performance
+  - profiles
+  - trips
+  - vehicles
+  - wallet
+relationships:
+- from: Account
+  to: User
+  type: belongs_to
+  via: user_id
+- from: User
+  to: Account
+  type: has_many
+  via: accounts
+- from: Session
+  to: User
+  type: belongs_to
+  via: user_id
+- from: CompanyAccount
+  to: Company
+  type: belongs_to
+  via: company_id
+- from: Company
+  to: CompanyAccount
+  type: has_many
+  via: company-accounts
+- from: Account
+  to: DataRecord
+  type: has_many
+  via: "activity/income/employment/transactions/... sub-resources"

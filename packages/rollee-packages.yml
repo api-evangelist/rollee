@@ -1,0 +1,36 @@
+generated: '2026-07-21'
+method: searched
+source: https://www.npmjs.com/search?q=%40getrollee
+notes: >-
+  Rollee ships client-side "Rollee Connect" SDKs (the embeddable account-linking
+  flow), not server-side API clients. React and React Native SDKs are published to
+  npm under the official @getrollee scope. Web JS and Flutter integrations are
+  documented but distributed as loader snippets / platform plugins rather than a
+  registry package.
+packages:
+- language: javascript
+  registry: npm
+  name: "@getrollee/connect-react-sdk"
+  version: 1.3.1
+  url: https://www.npmjs.com/package/@getrollee/connect-react-sdk
+  install: npm install @getrollee/connect-react-sdk
+  official: true
+  description: React SDK for Rollee Connect
+- language: javascript
+  registry: npm
+  name: "@getrollee/connect-react-native-sdk"
+  version: 1.1.1
+  license: MIT
+  url: https://www.npmjs.com/package/@getrollee/connect-react-native-sdk
+  install: npm install @getrollee/connect-react-native-sdk
+  official: true
+  description: React Native SDK for Rollee Connect
+docs:
+- name: React SDK docs
+  url: https://developers.getrollee.com/docs/react
+- name: React Native SDK docs
+  url: https://developers.getrollee.com/docs/react-native
+- name: Web JS SDK docs
+  url: https://developers.getrollee.com/docs/web
+- name: Flutter SDK docs
+  url: https://developers.getrollee.com/docs/flutter-sdk

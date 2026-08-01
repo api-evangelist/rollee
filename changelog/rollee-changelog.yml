@@ -1,0 +1,16 @@
+generated: '2026-07-21'
+method: searched
+source: https://developers.getrollee.com/changelog
+docs: https://developers.getrollee.com/changelog
+scheme: dated-entries
+current_version: v0.5
+entries:
+- title: Extended Gig Economy Platform Support (Increased Coverage)
+  url: https://developers.getrollee.com/changelog/increased-coverage
+  breaking: false
+  highlights: >-
+    Rollee Standard coverage expanded with additional gig-economy platforms:
+    Bolt, Deliveroo, Just Eat, Stuart, CAF, Job and Talent, Iziwork, and Brigad.
+notes: >-
+  Rollee publishes a dated changelog on the developer portal. Only the most
+  recent public entry was captured here; the live changelog is the source of truth.

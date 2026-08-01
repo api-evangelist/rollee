@@ -1,0 +1,25 @@
+generated: '2026-07-21'
+method: searched
+source: https://www.getrollee.com/security
+standards:
+- id: iso-27001
+  conforms: true
+  evidence: "getrollee.com/security states Rollee has achieved ISO 27001 certification"
+- id: gdpr
+  conforms: true
+  evidence: "getrollee.com/security states Rollee has taken measures to be GDPR-compliant"
+- id: oauth2
+  conforms: false
+  evidence: "API uses JWT bearer tokens issued by Rollee, not OAuth2 flows"
+- id: openid-connect
+  conforms: false
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: "No application/problem+json error envelope documented"
+- id: soc2
+  conforms: false
+  evidence: "Not claimed on the public security page"
+- id: pci-dss
+  conforms: false
+- id: hipaa
+  conforms: false

@@ -1,0 +1,35 @@
+generated: '2026-07-21'
+method: generated
+source: https://developers.getrollee.com/recipes
+notes: >-
+  Skills generated from Rollee's documented API reference and recipes. Steps are
+  grounded in documented HTTP method+path operations (Rollee publishes no
+  downloadable OpenAPI; the ReadMe reference and llms.txt index are the source).
+skills:
+- file: rollee-verify-income-and-employment.md
+  name: Verify a worker's income and employment with Rollee
+  api: Rollee User API
+  operations:
+  - POST /users
+  - POST /users/{id}/sessions/new
+  - GET /users/{id}/accounts
+  - GET /accounts/{id}/income
+  - GET /accounts/{id}/employment
+- file: rollee-connect-company-account.md
+  name: Connect a company account and read employer data with Rollee
+  api: Rollee Company API
+  operations:
+  - POST /companies
+  - GET /companies/{id}/company-accounts
+  - GET /company-accounts/{id}/employees
+  - GET /company-accounts/{id}/absences
+  - GET /company-accounts/{id}/income
+- file: rollee-set-up-webhooks.md
+  name: Set up Rollee webhooks for async data delivery
+  api: Rollee User API
+  operations:
+  - PUT /webhooks/accounts
+  - PUT /webhooks/endpoints
+  - PUT /webhooks/multi-endpoints
+  - GET /webhooks
+  - DELETE /webhooks/{type}

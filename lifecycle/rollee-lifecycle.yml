@@ -1,0 +1,21 @@
+generated: '2026-07-21'
+method: searched
+source: https://developers.getrollee.com/docs
+versioning:
+  scheme: uri-path
+  current: v0.5
+  note: Version embedded in the base path (/api/v0.5, /company/v0.5). Legacy v0.3 still referenced for some flows.
+  docs: https://developers.getrollee.com/docs/getting-started
+deprecation:
+  policy_url: null
+  sunset_header: false
+  note: No formal deprecation/sunset-header policy is published.
+sla:
+  url: null
+  uptime_target: null
+status_page: null
+deprecated_operations: []
+notes: >-
+  No public status page, SLA page, or deprecation policy was found. Versioning is
+  URI-path based; older API versions (v0.3) coexist with the current v0.5 for
+  session-creation compatibility.

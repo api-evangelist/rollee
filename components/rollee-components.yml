@@ -1,0 +1,28 @@
+generated: '2026-07-21'
+method: searched
+source: https://developers.getrollee.com/docs/rollee-connect
+docs: https://developers.getrollee.com/docs/connect-sdk
+families:
+- family: Rollee Connect
+  kind: embedded-account-linking-flow
+  description: >-
+    Rollee Connect is a prebuilt, embeddable UI flow that a worker uses to
+    securely link their gig-economy / payroll / tax / wallet accounts so the
+    partner can retrieve normalized income and employment data. It is customizable
+    from the Rollee dashboard and rendered client-side via the Connect SDKs.
+  customization: https://developers.getrollee.com/docs/customisation
+  loaders:
+  - platform: React
+    package: "@getrollee/connect-react-sdk"
+    component: RolleeConnect
+    docs: https://developers.getrollee.com/docs/react
+  - platform: React Native
+    package: "@getrollee/connect-react-native-sdk"
+    component: RolleeConnect
+    docs: https://developers.getrollee.com/docs/react-native
+  - platform: Web JS
+    package: HTML/JavaScript loader snippet
+    docs: https://developers.getrollee.com/docs/web
+  - platform: Flutter
+    package: Flutter plugin
+    docs: https://developers.getrollee.com/docs/flutter-sdk

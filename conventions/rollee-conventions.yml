@@ -1,0 +1,43 @@
+generated: '2026-07-21'
+method: searched
+source: https://developers.getrollee.com/docs/conventions
+docs: https://developers.getrollee.com/docs/conventions
+conventions:
+  authentication:
+    style: JWT bearer token in the Authorization header
+    ref: authentication/rollee-authentication.yml
+  identifiers:
+    format: UUID
+    example: 01234567-89ab-cdef-0123-456789abcdef
+    note: All resource IDs are represented as UUIDs.
+  datetimes:
+    format: RFC 3339, UTC
+    example: 2021-06-30 14:30:00 UTC
+    note: All datetimes are returned as strings in UTC.
+  null_values:
+    note: >-
+      A null field means either the underlying datasource does not support that
+      field, or the datasource returned no data for it.
+  versioning:
+    scheme: uri-path
+    current: v0.5
+    note: The API version is embedded in the base path (e.g. /api/v0.5).
+  webhooks:
+    ref: asyncapi/rollee-webhooks.yml
+    signature: HMAC SHA-512 in the X-Signature header (when a webhook secret is set)
+  idempotency:
+    documented: false
+    note: >-
+      No idempotency-key contract is documented. Most read operations are GET;
+      account/user creation is not documented as idempotent.
+  errors:
+    ref: errors/rollee-problem-types.yml
+    note: >-
+      Errors surface via standard HTTP status codes; a dedicated Connect Errors
+      reference documents account-connection failure reasons.
+  pagination:
+    documented: false
+    note: Not documented in the public conventions page.
+  rate_limits:
+    documented: false
+    note: Not published in the public documentation.

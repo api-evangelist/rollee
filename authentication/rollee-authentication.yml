@@ -1,0 +1,35 @@
+generated: '2026-07-21'
+method: searched
+source: https://developers.getrollee.com/docs/authentication
+docs: https://developers.getrollee.com/docs/authentication
+summary:
+  types: [http]
+  scheme: bearer
+  token_format: JWT
+  api_key_in: [header]
+  oauth2_flows: []
+schemes:
+- name: bearerAuth
+  type: http
+  scheme: bearer
+  bearer_format: JWT
+  location: header
+  header: Authorization
+  format: "Authorization: Bearer <YOUR_TOKEN>"
+details:
+  issuance: >-
+    The initial JWT is provisioned by Rollee (via the contact / onboarding
+    process) with a fixed validity period. Sandbox and production tokens are
+    separate — nothing is shared between the two environments.
+  refresh:
+    production_endpoint: https://api.getrollee.com/api/v0.5/token/refresh
+    sandbox_endpoint: https://api.sand.getrollee.com/api/v0.3/token/refresh
+    method: GET
+    response_example: '{ "token": "YOUR_NEW_TOKEN" }'
+    note: Generate a new token via the refresh endpoint before the current one expires.
+  sessions: >-
+    User- and company-facing flows use short-lived sessions created per user/company;
+    expired sessions are re-established via a session refresh endpoint.
+  errors:
+    unauthorized: 401 returned for invalid/expired tokens
+    success: 200 on valid authentication

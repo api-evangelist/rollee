@@ -1,0 +1,28 @@
+generated: '2026-07-21'
+method: searched
+source: https://developers.getrollee.com/docs/user-environments
+docs: https://developers.getrollee.com/docs/user-environments
+environments:
+- name: sandbox
+  base_url: https://api.sand.getrollee.com/api/v0.5
+  mcp_url: https://rollee-api-mcp.sand.getrollee.com/mcp
+  description: >-
+    Isolated from production; does not contact third-party datasources. Rollee
+    Connect does not send real authentication requests — it automatically creates
+    a fake account. All endpoints return static mock data that is refreshed
+    periodically.
+- name: production
+  base_url: https://api.getrollee.com/api/v0.5
+  mcp_url: https://rollee-api-mcp.getrollee.com/mcp
+  description: Live third-party datasources and real user data; actions have real-world consequences.
+selection:
+  method: separate base URL per environment (and, in the SDK, a `production` boolean prop)
+  sdk_note: "The Connect SDK defaults to Sandbox; set `production: true` to target Production."
+test_credentials:
+  note: >-
+    The sandbox accepts random/arbitrary credentials to authenticate with any
+    platform and returns preloaded sample data. Rollee does not publish specific
+    magic test usernames/passwords — developers supply their own random values.
+token_separation: >-
+  JWT tokens are not shared between environments; sandbox and production use
+  different tokens.
