@@ -10,22 +10,26 @@ server:
   auth:
     scheme: bearer
     header: Authorization
-    note: "Requires a Rollee JWT API token as `Authorization: Bearer {token}`."
+    note: 'Requires a Rollee JWT API token as `Authorization: Bearer {token}`.'
 install:
-  claude_code: >-
-    claude mcp add --transport http rollee-user-api
-    https://rollee-api-mcp.getrollee.com/mcp
-    --header "Authorization: Bearer {YOUR_API_TOKEN}"
+  claude_code: 'claude mcp add --transport http rollee-user-api https://rollee-api-mcp.getrollee.com/mcp
+    --header "Authorization: Bearer {YOUR_API_TOKEN}"'
   cursor_mcp_json:
     mcpServers:
       rolleeMCP:
         url: https://rollee-api-mcp.getrollee.com/mcp
         headers:
-          Authorization: "Bearer {YOUR_API_TOKEN}"
+          Authorization: Bearer {YOUR_API_TOKEN}
 tools:
-  note: >-
-    The server exposes tools for nearly all Rollee API endpoints, excluding
-    operations that perform deletes. Capabilities include creating users,
-    retrieving account/income/employment/transaction data, updating user
-    metadata, and configuring webhooks. Exact tool names are provided by the
-    live server at connection time.
+  note: The server exposes tools for nearly all Rollee API endpoints, excluding operations that perform
+    deletes. Capabilities include creating users, retrieving account/income/employment/transaction data,
+    updating user metadata, and configuring webhooks. Exact tool names are provided by the live server
+    at connection time.
+deployment:
+  mode: remote
+  endpoint: https://rollee-api-mcp.getrollee.com/mcp
+  verified: probed
+  probe: live
+  tools: 31
+  checked: '2026-08-12'
+  source: catalog MCP census
