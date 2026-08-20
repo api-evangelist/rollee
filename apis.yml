@@ -64,6 +64,12 @@ apis:
   tags:
   - Income
   - Employment
+  - Transaction
+  - Account
+  - Webhook
+  tags_raw:
+  - Income
+  - Employment
   - Transactions
   - Accounts
   - Webhooks
